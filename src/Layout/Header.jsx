@@ -15,10 +15,10 @@ const Header = () => {
             
             <DropdownMenu />
             <Link to="/firma-corp">
-              <Button variant="contained" color="primary">Firma Corporativa</Button>
+              <Button variant="contained" color="primary" size="small">Firma Corporativa</Button>
             </Link>
             <Link to="/feedback">
-              <Button variant="contained" color="primary">Comentarios</Button>
+              <Button variant="contained" color="primary" size="small">Comentarios</Button>
             </Link>
             
           </div>
