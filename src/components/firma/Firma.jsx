@@ -16,7 +16,7 @@ function Firma({ data }) {
 
   return (
     <>
-      <div>
+      <div className='form-group'>
         <div ref={firmaRef} className="firma">
           <img 
             src="/icbf-logo.png" // Usa la ruta relativa desde la carpeta `public`
