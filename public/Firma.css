@@ -78,7 +78,7 @@ select {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%; /* Hacer que el botón ocupe todo el ancho */
+  width: 30%; /* Hacer que el botón ocupe todo el ancho */
 }
 
 .firma-logo {
@@ -122,7 +122,7 @@ select {
 
 .button-container button {
   margin-bottom: 10px;
-  width: 100%; /* Asegura que los botones también ocupen todo el ancho disponible */
+  width: 50%; /* Asegura que los botones también ocupen todo el ancho disponible */
 }
 
 .container-copy {
