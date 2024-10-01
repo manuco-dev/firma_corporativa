@@ -32,7 +32,7 @@ form {
 }
 
 input, select {
-  width: 90%; /* Asegura que todos los inputs y selects ocupen el mismo ancho */
+  width: 100%; /* Asegura que todos los inputs y selects ocupen el mismo ancho */
   padding: 6px; /* Ajusta el padding */
   border: 1px solid #ccc;
   border-radius: 5px;
