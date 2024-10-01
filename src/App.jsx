@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-import UnlockPDF from './components/pdf/PdfUnlock';
+
 
 import Header from './Layout/Header';
 import PiePag from './Layout/PiePag';
@@ -29,7 +29,7 @@ import Plantilla15 from './components/documentaciones/Plantilla15';
 
 
 import FirmaInput from './components/firma/FirmaInput';
-import EditPdf from './components/pdf/EditPdf';
+
 import FeedBack from './components/documentaciones/Feedback';
 
 
@@ -41,9 +41,7 @@ const App = () => {
       <Header />
       <PiePag />
       <Routes>
-        <Route path="/pdfunlock" element={<UnlockPDF />} />
         <Route path="/firma-corp" element={<FirmaInput />} />
-        <Route path='/editpdf' element={<EditPdf />} />
         <Route path="/plantilla1" element={< Plantilla1 />} />
         <Route path="/plantilla2" element={< Plantilla2 />} />
         <Route path="/plantilla3" element={< Plantilla3 />} />
