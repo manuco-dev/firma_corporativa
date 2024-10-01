@@ -38,7 +38,7 @@ input, select {
   border-radius: 5px;
   font-size: 14px; /* Tamaño de fuente consistente */
   box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-  margin-bottom: 5px; /* Espacio inferior entre los campos */
+  margin-bottom: 10px; /* Espacio inferior entre los campos */
 }
 
 select {
@@ -50,7 +50,7 @@ select {
 
 /* Firma.css */
 .form-group {
-  margin-bottom: 5px;
+  margin-bottom: 10px; /* Espacio entre grupos de formulario */
   width: 100%;
 }
 
@@ -72,13 +72,14 @@ select {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 8px 15px; /* Ajusta el padding para que el botón sea más pequeño */
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 50%; /* Hacer que el botón ocupe todo el ancho */
+  width: 50%; /* Asegura que el botón ocupe el 50% del ancho del contenedor */
+  font-size: 0.9em; /* Tamaño de fuente más pequeño */
 }
 
 .firma-logo {
@@ -122,7 +123,7 @@ select {
 
 .button-container button {
   margin-bottom: 10px;
-  width: 50%; /* Asegura que los botones también ocupen todo el ancho disponible */
+  width: 50%; /* Asegura que los botones también ocupen el 50% del ancho disponible */
 }
 
 .container-copy {
@@ -132,4 +133,19 @@ select {
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .btn {
+    width: 100%; /* Botones ocuparán todo el ancho en pantallas pequeñas */
+  }
+
+  .firma-container {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  }
+
+  .App {
+    padding: 5%; /* Reduce el padding en pantallas más pequeñas */
+  }
 }
