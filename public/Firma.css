@@ -33,12 +33,12 @@ form {
 
 input, select {
   width: 100%; /* Asegura que todos los inputs y selects ocupen el mismo ancho */
-  padding: 6px; /* Ajusta el padding */
+  padding: 1px; /* Ajusta el padding */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 12px; /* Tamaño de fuente consistente */
+  font-size: 8px; /* Tamaño de fuente consistente */
   box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-  margin-bottom: 2px; /* Espacio inferior entre los campos */
+  margin-bottom: 1px; /* Espacio inferior entre los campos */
 }
 
 select {
@@ -50,8 +50,8 @@ select {
 
 /* Firma.css */
 .form-group {
-  margin-bottom: 15px;
-  width: 90%;
+  margin-bottom: 5px;
+  
 }
 
 .firma p {
@@ -72,7 +72,7 @@ select {
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -114,7 +114,7 @@ select {
 }
 
 .button-container {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
