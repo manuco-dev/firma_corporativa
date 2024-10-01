@@ -38,7 +38,7 @@ input, select {
   border-radius: 5px;
   font-size: 12px; /* Tamaño de fuente consistente */
   box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-  margin-bottom: 8px; /* Espacio inferior entre los campos */
+  margin-bottom: 2px; /* Espacio inferior entre los campos */
 }
 
 select {
