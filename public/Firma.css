@@ -1,24 +1,24 @@
 /* App.css */
 .firma-container {
   display: flex;
-  flex-direction: column; /* Alinea los elementos en una columna */
-  align-items: center; /* Alinea los elementos horizontalmente en el centro */
-  justify-content: center; /* Alinea los elementos verticalmente en el centro */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 10px;
   margin: 20px auto;
   text-align: center;
-  width: fit-content; /* Ajusta el ancho al contenido */
+  width: fit-content;
 }
 
 .firma {
   display: flex;
-  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  align-items: center;
   font-family: 'Nunito Sans';
   color: #000;
   padding: 10px;
   margin: 20px auto;
   text-align: left;
-  width: fit-content; /* Ajusta el ancho al contenido */
+  width: fit-content;
 }
 
 .App {
@@ -27,21 +27,30 @@
 
 form {
   margin: 20px;
+  max-width: 600px; /* Limita el ancho del formulario */
+  margin: 0 auto; /* Centra el formulario */
 }
-input {
-  width: 40%;
-  padding: 4  px; /* Reducir el padding */
+
+input, select {
+  width: 100%; /* Asegura que todos los inputs y selects ocupen el mismo ancho */
+  padding: 8px; /* Ajusta el padding */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 9px; /* Reducir el tamaño de fuente */
+  font-size: 14px; /* Tamaño de fuente consistente */
+  box-sizing: border-box; /* Asegura que el padding no altere el ancho */
+  margin-bottom: 10px; /* Espacio inferior entre los campos */
 }
 
-
+select {
+  -webkit-appearance: none; /* Remueve el estilo por defecto en navegadores WebKit */
+  -moz-appearance: none; /* Remueve el estilo por defecto en Firefox */
+  appearance: none; /* Remueve el estilo por defecto general */
+  background-color: white; /* Fondo blanco */
+}
 
 /* Firma.css */
-
 .form-group {
-  margin-bottom: 10px; /* Reducir el margen inferior */
+  margin-bottom: 15px;
   width: 100%;
 }
 
@@ -49,42 +58,38 @@ input {
   margin: 5px 0;
 }
 
-
 .nombre {
-  font-size: 1.2em; /* Tamaño de fuente más grande para el nombre */
-  margin-bottom: 5px; /* Espaciado inferior */
+  font-size: 1.2em;
+  margin-bottom: 5px;
 }
+
 .detalle {
-  margin-bottom: 3px; /* Espaciado inferior */
+  margin-bottom: 3px;
 }
 
 .clasificacion-info {
   font-size: 11px;
 }
 
-
 .btn {
-  margin-left: 20px; /* Agrega un margen a la izquierda para separar el botón */
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%; /* Hacer que el botón ocupe todo el ancho */
 }
-
 
 .firma-logo {
-  width: 150px; /* Ajusta el tamaño según necesites */
-  margin-right: 15px; /* Espacio entre la imagen y el texto */
+  width: 150px;
+  margin-right: 15px;
 }
-
 
 .firma-info {
   line-height: 1;
   font-size: 16px;
 }
-
 
 .PiePag {
   text-align: center;
@@ -114,14 +119,17 @@ input {
   flex-direction: column;
   align-items: center;
 }
+
 .button-container button {
-  margin-bottom: 10px; /* Espacio entre el botón y el mensaje */
+  margin-bottom: 10px;
+  width: 100%; /* Asegura que los botones también ocupen todo el ancho disponible */
 }
+
 .container-copy {
   color: green;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente, opcional */
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor, opcional */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
