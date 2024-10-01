@@ -21,6 +21,7 @@ const DropdownMenu = () => {
         onClick={handleClick}
         variant="contained"
         color="primary"
+        size="small"
       >
         Plantillas de Solución
       </Button>
