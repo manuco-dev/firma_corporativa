@@ -38,7 +38,7 @@ input, select {
   border-radius: 5px;
   font-size: 14px; /* Tamaño de fuente consistente */
   box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-  margin-bottom: 10px; /* Espacio inferior entre los campos */
+  margin-bottom: 5px; /* Espacio inferior entre los campos */
 }
 
 select {
@@ -50,7 +50,7 @@ select {
 
 /* Firma.css */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   width: 100%;
 }
 
