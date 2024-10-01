@@ -23,6 +23,10 @@
 
 .App {
   text-align: center;
+  transform: scale(0.7); /* Escala todo al 70% */
+  transform-origin: top center; /* Ajusta el origen de la escala */
+  width: 100%; /* Asegúrate de que ocupe todo el ancho disponible */
+  height: auto; /* Para ajustar dinámicamente la altura */
 }
 
 form {
