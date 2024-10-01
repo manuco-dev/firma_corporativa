@@ -1,0 +1,16 @@
+/* Header.css */
+.barra {
+  background-color: #f8f9fa; /* Color de fondo opcional */
+  padding: 10px 0; /* Espaciado opcional */
+}
+
+.contenedor {
+  display: flex;
+  justify-content: left; /* Centra los elementos horizontalmente */
+}
+
+.contenido-barra {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente en el centro */
+  gap: 10px; /* Espacio entre elementos */
+}

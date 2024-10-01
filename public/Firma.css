@@ -1,0 +1,124 @@
+/* App.css */
+.firma-container {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos en una columna */
+  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  justify-content: center; /* Alinea los elementos verticalmente en el centro */
+  padding: 10px;
+  margin: 20px auto;
+  text-align: center;
+  width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.firma {
+  display: flex;
+  align-items: center; /* Alinea los elementos horizontalmente en el centro */
+  font-family: 'Nunito Sans';
+  color: #000;
+  padding: 10px;
+  margin: 20px auto;
+  text-align: left;
+  width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.App {
+  text-align: center;
+}
+
+form {
+  margin: 20px;
+}
+input {
+  width: 40%;
+  padding: 4  px; /* Reducir el padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 9px; /* Reducir el tamaño de fuente */
+}
+/* Firma.css */
+
+.form-group {
+  margin-bottom: 10px; /* Reducir el margen inferior */
+  width: 100%;
+}
+
+.firma p {
+  margin: 5px 0;
+}
+
+
+.nombre {
+  font-size: 1.2em; /* Tamaño de fuente más grande para el nombre */
+  margin-bottom: 5px; /* Espaciado inferior */
+}
+.detalle {
+  margin-bottom: 3px; /* Espaciado inferior */
+}
+
+.clasificacion-info {
+  font-size: 11px;
+}
+
+
+.btn {
+  margin-left: 20px; /* Agrega un margen a la izquierda para separar el botón */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.firma-logo {
+  width: 150px; /* Ajusta el tamaño según necesites */
+  margin-right: 15px; /* Espacio entre la imagen y el texto */
+}
+
+
+.firma-info {
+  line-height: 1;
+  font-size: 16px;
+}
+
+
+.PiePag {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.PiePag p {
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+}
+
+.copy-confirmation {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button-container button {
+  margin-bottom: 10px; /* Espacio entre el botón y el mensaje */
+}
+.container-copy {
+  color: green;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente, opcional */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra para el contenedor, opcional */
+}
