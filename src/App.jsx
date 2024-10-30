@@ -31,8 +31,10 @@ import Plantilla15 from './components/documentaciones/Plantilla15';
 import FirmaInput from './components/firma/FirmaInput';
 
 import FeedBack from './components/documentaciones/Feedback';
-import { Comprimir } from './components/Comprimir';
+
 import Plantilla16 from './components/documentaciones/Plantilla16';
+import UploadToCloudinary from './components/Cloudinary';
+
 
 
 
@@ -61,7 +63,7 @@ const App = () => {
         <Route path="/plantilla15" element={< Plantilla15 />} />
         <Route path="/plantilla16" element={< Plantilla16 />} />
         <Route path="/feedback"    element={< FeedBack />} />
-        <Route path="/comprimir"  element={<Comprimir />}/>
+        <Route path="/comprimir"  element={<UploadToCloudinary/>}/>
       </Routes>
     </Router>
   );
