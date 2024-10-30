@@ -79,6 +79,11 @@ const DropdownMenu = () => {
         <MenuItem onClick={handleClose} component={Link} to="/plantilla15">
         Actualización de Firma
         </MenuItem>
+        <MenuItem onClick={handleClose} component={Link} to="/plantilla16">
+        Configuración de Perfil Windows 11
+        </MenuItem>
+        
+
         
       </Menu>
       

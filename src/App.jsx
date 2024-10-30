@@ -32,6 +32,7 @@ import FirmaInput from './components/firma/FirmaInput';
 
 import FeedBack from './components/documentaciones/Feedback';
 import { Comprimir } from './components/Comprimir';
+import Plantilla16 from './components/documentaciones/Plantilla16';
 
 
 
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/plantilla13" element={< Plantilla13 />} />
         <Route path="/plantilla14" element={< Plantilla14 />} />
         <Route path="/plantilla15" element={< Plantilla15 />} />
+        <Route path="/plantilla16" element={< Plantilla16 />} />
         <Route path="/feedback"    element={< FeedBack />} />
         <Route path="/comprimir"  element={<Comprimir />}/>
       </Routes>
