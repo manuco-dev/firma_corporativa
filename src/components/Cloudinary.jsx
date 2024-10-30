@@ -19,7 +19,7 @@ const UploadAndCompressPDF = () => {
     setUploading(true);
     const formData = new FormData();
     formData.append("file", selectedFile);
-    formData.append("upload_preset", "archivos"); // Reemplaza con tu preset de Cloudinary
+    formData.append("upload_preset", "archivos");
 
     try {
       const response = await fetch(`https://api.cloudinary.com/v1_1/dacqimkdr/upload`, {
@@ -27,7 +27,7 @@ const UploadAndCompressPDF = () => {
         body: formData,
       });
       const data = await response.json();
-      setFileUrl(data.secure_url); // Almacena el enlace directo al archivo en Cloudinary
+      setFileUrl(data.secure_url);
     } catch (error) {
       console.error("Error al subir archivo:", error);
     } finally {
@@ -50,7 +50,7 @@ const UploadAndCompressPDF = () => {
         body: JSON.stringify({ url: fileUrl }),
       });
       const pdfData = await pdfCoResponse.json();
-      setCompressedFileUrl(pdfData.url); // URL del archivo comprimido de api.pdf.co
+      setCompressedFileUrl(pdfData.url);
     } catch (error) {
       console.error("Error al comprimir archivo:", error);
     } finally {
@@ -59,19 +59,64 @@ const UploadAndCompressPDF = () => {
   };
 
   return (
-    <div>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload} disabled={!selectedFile || uploading}>
-        {uploading ? "Subiendo..." : "Subir a Cloudinary"}
-      </button>
-      <button onClick={handleCompress} disabled={!fileUrl || compressing}>
-        {compressing ? "Comprimiendo..." : "Comprimir PDF"}
-      </button>
+    <div style={{ maxWidth: "500px", margin: "0 auto", textAlign: "center", fontFamily: "Arial, sans-serif" }}>
+      <input
+        type="file"
+        onChange={handleFileChange}
+        style={{ margin: "20px 0", padding: "10px", fontSize: "16px" }}
+      />
+      <div>
+        <button
+          onClick={handleUpload}
+          disabled={!selectedFile || uploading}
+          style={{
+            padding: "10px 20px",
+            margin: "10px",
+            fontSize: "16px",
+            backgroundColor: uploading ? "#ccc" : "#007bff",
+            color: "#fff",
+            border: "none",
+            borderRadius: "5px",
+            cursor: uploading ? "not-allowed" : "pointer",
+          }}
+        >
+          {uploading ? "Subiendo..." : "Subir a Cloudinary"}
+        </button>
+
+        <button
+          onClick={handleCompress}
+          disabled={!fileUrl || compressing}
+          style={{
+            padding: "10px 20px",
+            margin: "10px",
+            fontSize: "16px",
+            backgroundColor: compressing ? "#ccc" : "#28a745",
+            color: "#fff",
+            border: "none",
+            borderRadius: "5px",
+            cursor: compressing ? "not-allowed" : "pointer",
+          }}
+        >
+          {compressing ? "Comprimiendo..." : "Comprimir PDF"}
+        </button>
+      </div>
+
       {fileUrl && (
-        <p>Archivo subido a Cloudinary: <a href={fileUrl} target="_blank" rel="noopener noreferrer">{fileUrl}</a></p>
+        <p style={{ margin: "15px 0" }}>
+          Archivo subido a Cloudinary:{" "}
+          <a href={fileUrl} target="_blank" rel="noopener noreferrer" style={{ color: "#007bff" }}>
+            Ver archivo
+          </a>
+        </p>
       )}
+
       {compressedFileUrl && (
-        <p>Archivo comprimido: <a href={compressedFileUrl} target="_blank" rel="noopener noreferrer">{compressedFileUrl}</a></p>
+        <p style={{ margin: "15px 0" }}>
+          Archivo comprimido:{" "}
+          <a href={compressedFileUrl} download="archivo_comprimido.pdf" target="_blank" rel="noopener noreferrer" style={{ color: "#28a745" }}>
+            Descargar archivo comprimido
+          </a>
+        </p>
       )}
     </div>
   );
