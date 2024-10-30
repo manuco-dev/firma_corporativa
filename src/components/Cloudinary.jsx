@@ -59,7 +59,7 @@ const UploadAndCompressPDF = () => {
   };
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", textAlign: "center", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ maxWidth: "500px",  textAlign: "center", fontFamily: "Arial, sans-serif" }}>
       <input
         type="file"
         onChange={handleFileChange}
