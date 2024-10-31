@@ -1,6 +1,9 @@
 import React, { useRef } from 'react';
 import html2canvas from 'html2canvas';
 
+import { Button } from 'primereact/button';
+
+
 function Firma({ data }) {
   const firmaRef = useRef(null);
 
@@ -35,7 +38,7 @@ function Firma({ data }) {
             <p className='clasificacion-info'>Clasificación de la información: <strong>CLASIFICADA</strong></p>
           </div>
         </div>
-        <button onClick={generarImagen} className='btn btn-primary'>Generar Firma PNG</button>
+        <Button label="Generar Firma PNG" icon="pi pi-check"onClick={generarImagen} ></Button>
       </div>
     </>
   );

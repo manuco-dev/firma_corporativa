@@ -1,6 +1,7 @@
 import  { useState } from 'react';
-import { MultiSelect } from 'primereact/multiselect';
+import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
+import { FloatLabel } from 'primereact/floatlabel';
 
 import PiePag from '../../Layout/PiePag';
 import Firma from './Firma';
@@ -47,15 +48,19 @@ const FirmaInput = () => {
       <div className="App">
         <form>
           <div className="form-group">
+            <FloatLabel>
             <InputText
               type="text"
               className="input-field"
               name="nombre"
-              placeholder="Nombres y Apellidos"
+              
               onChange={handleChange}
             />
+            <label htmlFor="nombre">Nombres y Apellidos</label>
+            </FloatLabel>
           </div>
           <div className="form-group">
+            <FloatLabel>
             <InputText
               type="text"
               className="input-field"
@@ -63,8 +68,11 @@ const FirmaInput = () => {
               placeholder="Cargo planta o Contratista"
               onChange={handleChange}
             />
+            <label htmlFor="puesto">Cargo planta o Contratista</label>
+            </FloatLabel>
           </div>
-          <div className="form-group">
+          <div className="form-group" >
+            <FloatLabel>
             <InputText
               type="text"
               className="input-field"
@@ -72,8 +80,11 @@ const FirmaInput = () => {
               placeholder="Grupo al que pertenece"
               onChange={handleChange}
             />
+            <label htmlFor="grupo">Grupo al que pertenece</label>
+            </FloatLabel>
           </div>
           <div className="form-group">
+            <FloatLabel>
             <InputText
               type="email"
               className="input-field"
@@ -81,10 +92,12 @@ const FirmaInput = () => {
               placeholder="ICBF Sede Regional XXXXXXXXX"
               onChange={handleChange}
             />
+            <label htmlFor="email">ICBF Sede Regional XXXXXXXXX</label>
+            </FloatLabel>
           </div>
 
-          <div className="form-group">
-            <MultiSelect
+          <div className="form-group" >
+            <Dropdown
               name="direccion"
               className="input-field"
               placeholder="Selecciona una dirección"
@@ -96,6 +109,7 @@ const FirmaInput = () => {
           </div>
 
           <div className="form-group">
+            <FloatLabel>
             <InputText
               type="text"
               className="input-field"
@@ -103,6 +117,8 @@ const FirmaInput = () => {
               placeholder="Teléfono si tiene"
               onChange={handleChange}
             />
+            <label htmlFor="telefono">Teléfono si tiene</label>
+            </FloatLabel>
           </div>
         </form>
 

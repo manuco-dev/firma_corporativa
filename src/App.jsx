@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import 'primereact/resources/themes/saga-blue/theme.css'; // O cualquier otro tema
