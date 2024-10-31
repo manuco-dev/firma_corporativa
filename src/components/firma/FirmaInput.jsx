@@ -47,7 +47,7 @@ const FirmaInput = () => {
     <>
       <div className="App">
         <form>
-          <div className="form-group">
+          <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
             <InputText
               type="text"
@@ -59,7 +59,7 @@ const FirmaInput = () => {
             <label htmlFor="nombre">Nombres y Apellidos</label>
             </FloatLabel>
           </div>
-          <div className="form-group">
+          <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
             <InputText
               type="text"
@@ -71,7 +71,7 @@ const FirmaInput = () => {
             <label htmlFor="puesto">Cargo planta o Contratista</label>
             </FloatLabel>
           </div>
-          <div className="form-group" >
+          <div className="form-group " style={{ marginBottom: '30px' }}>
             <FloatLabel>
             <InputText
               type="text"
@@ -83,7 +83,7 @@ const FirmaInput = () => {
             <label htmlFor="grupo">Grupo al que pertenece</label>
             </FloatLabel>
           </div>
-          <div className="form-group">
+          <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
             <InputText
               type="email"
@@ -96,7 +96,7 @@ const FirmaInput = () => {
             </FloatLabel>
           </div>
 
-          <div className="form-group" >
+          <div className="form-group" style={{ marginBottom: '30px' }} >
             <Dropdown
               name="direccion"
               className="input-field"
@@ -108,7 +108,7 @@ const FirmaInput = () => {
             />
           </div>
 
-          <div className="form-group">
+          <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
             <InputText
               type="text"

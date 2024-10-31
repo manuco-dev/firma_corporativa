@@ -33,12 +33,12 @@ form {
 
 input, select {
   width: 100%; /* Asegura que todos los inputs y selects ocupen el mismo ancho */
-  padding: 8px; /* Ajusta el padding */
+  padding: 10px; /* Ajusta el padding */
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 14px; /* Tamaño de fuente consistente */
+  font-size: 10px; /* Tamaño de fuente consistente */
   box-sizing: border-box; /* Asegura que el padding no altere el ancho */
-  margin-bottom: 15px; /* Espacio inferior entre los campos */
+  margin-bottom: 20px; /* Aumentar el espacio inferior entre los campos */
 }
 
 select {
@@ -50,7 +50,7 @@ select {
 
 /* Firma.css */
 .form-group {
-  margin-bottom: 25px; /* Espacio entre grupos de formulario */
+  margin-bottom: 20px; /* Aumentar el espacio entre grupos de formulario */
   width: 100%;
 }
 
