@@ -1,5 +1,6 @@
 import  { useState } from 'react';
 import { MultiSelect } from 'primereact/multiselect';
+import { InputText } from 'primereact/inputtext';
 
 import PiePag from '../../Layout/PiePag';
 import Firma from './Firma';
@@ -46,7 +47,7 @@ const FirmaInput = () => {
       <div className="App">
         <form>
           <div className="form-group">
-            <input
+            <InputText
               type="text"
               className="input-field"
               name="nombre"
@@ -55,7 +56,7 @@ const FirmaInput = () => {
             />
           </div>
           <div className="form-group">
-            <input
+            <InputText
               type="text"
               className="input-field"
               name="puesto"
@@ -64,7 +65,7 @@ const FirmaInput = () => {
             />
           </div>
           <div className="form-group">
-            <input
+            <InputText
               type="text"
               className="input-field"
               name="grupo"
@@ -73,7 +74,7 @@ const FirmaInput = () => {
             />
           </div>
           <div className="form-group">
-            <input
+            <InputText
               type="email"
               className="input-field"
               name="email"
@@ -95,7 +96,7 @@ const FirmaInput = () => {
           </div>
 
           <div className="form-group">
-            <input
+            <InputText
               type="text"
               className="input-field"
               name="telefono"
