@@ -49,7 +49,7 @@ const UploadAndCompressPDF = () => {
         },
         body: JSON.stringify({
           url: fileUrl,
-          profiles: "remove-empty-pages"
+          
         })
       });
       const pdfData = await pdfCoResponse.json();
