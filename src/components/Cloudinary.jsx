@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 
 const UploadAndCompressPDF = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -47,8 +47,10 @@ const UploadAndCompressPDF = () => {
           "Content-Type": "application/json",
           "x-api-key": "comanuel7@gmail.com_xxNTTCdRFqwbbr8MPWw8rJ1EremzCUpAlVRb3RrZtFaPDnpTKxZKykszkc8vIi6Z" // Reemplaza con tu API Key de api.pdf.co
         },
-        body: JSON.stringify({ url: fileUrl }),
-        removeEmptyPages: true
+        body: JSON.stringify({
+          url: fileUrl,
+          profiles: "remove-empty-pages"
+        })
       });
       const pdfData = await pdfCoResponse.json();
       setCompressedFileUrl(pdfData.url);

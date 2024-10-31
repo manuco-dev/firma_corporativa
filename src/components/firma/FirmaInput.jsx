@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
+import { MultiSelect } from 'primereact/multiselect';
 
 import PiePag from '../../Layout/PiePag';
 import Firma from './Firma';
@@ -13,9 +14,6 @@ const FirmaInput = () => {
     telefono: ''
   });
 
-  const [isEditingAddress, setIsEditingAddress] = useState(false); // Para gestionar si estamos en modo input o select
-
-  // Lista de direcciones predefinidas
   const direcciones = [
     'Barrio la Matuna, Edificio Concasa Piso 16',
     'Barrio Torices Bogotá Cra. 43 #14a-34',
@@ -27,9 +25,6 @@ const FirmaInput = () => {
     'Calle 11 Libertador # 8 - 35 Barrio La Sabana, Simití - Bolívar',
     'Turbaco-Rub. La Granja Cra 15 #28-284',
     'Carrera 17 # 5 - 191 Barrio Torices Sector San Pedro, Cartagena - Bolívar'
-
-
-    
   ];
 
   const handleChange = (e) => {
@@ -39,13 +34,11 @@ const FirmaInput = () => {
     });
   };
 
-  const handleAddressFocus = () => {
-    setIsEditingAddress(true); // Al hacer clic, cambia a un select
-  };
-
   const handleSelectChange = (e) => {
-    handleChange(e);
-    setIsEditingAddress(false); // Después de seleccionar, vuelve al input con la dirección seleccionada
+    setFormData({
+      ...formData,
+      direccion: e.value
+    });
   };
 
   return (
@@ -90,34 +83,15 @@ const FirmaInput = () => {
           </div>
 
           <div className="form-group">
-            {/* Mostrar un input o un select basado en el estado */}
-            {!isEditingAddress ? (
-              // Si no está en modo edición, mostrar un input
-              <input
-                type="text"
-                className="input-field"
-                name="direccion"
-                placeholder="Dirección del lugar de trabajo"
-                value={formData.direccion}
-                onFocus={handleAddressFocus} // Al hacer clic, cambia a select
-                onChange={handleChange} // Permitir edición si es necesario
-              />
-            ) : (
-              // Si está en modo edición, mostrar un select
-              <select
-                name="direccion"
-                className="input-field"
-                value={formData.direccion}
-                onChange={handleSelectChange} // Al seleccionar, vuelve al input
-              >
-                <option value="">Selecciona una dirección</option>
-                {direcciones.map((direccion, index) => (
-                  <option key={index} value={direccion}>
-                    {direccion}
-                  </option>
-                ))}
-              </select>
-            )}
+            <MultiSelect
+              name="direccion"
+              className="input-field"
+              placeholder="Selecciona una dirección"
+              value={formData.direccion}
+              options={direcciones.map((direccion) => ({ label: direccion, value: direccion }))}
+              onChange={handleSelectChange}
+              display="chip"
+            />
           </div>
 
           <div className="form-group">
