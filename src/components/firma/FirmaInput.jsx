@@ -25,7 +25,7 @@ const FirmaInput = () => {
     'Avenida Colombia # 6 - 36 Magangué - Bolívar',
     'Calle 19 # 1 A - 15 Barrio Centro Mompós - Bolívar',
     'Calle 11 Libertador # 8 - 35 Barrio La Sabana, Simití - Bolívar',
-    'Turbaco-Rub. La Granja Cra 15 #28-284',
+    'Turbaco- Urb La Granja Cra 15 #28-284',
     'Carrera 17 # 5 - 191 Barrio Torices Sector San Pedro, Cartagena - Bolívar'
   ];
 
