@@ -65,7 +65,7 @@ const FirmaInput = () => {
               type="text"
               className="input-field"
               name="puesto"
-              placeholder="Cargo planta o Contratista"
+              
               onChange={handleChange}
             />
             <label htmlFor="puesto">Cargo planta o Contratista</label>
@@ -77,7 +77,7 @@ const FirmaInput = () => {
               type="text"
               className="input-field"
               name="grupo"
-              placeholder="Grupo al que pertenece"
+              
               onChange={handleChange}
             />
             <label htmlFor="grupo">Grupo al que pertenece</label>
@@ -89,7 +89,6 @@ const FirmaInput = () => {
               type="email"
               className="input-field"
               name="email"
-              placeholder="ICBF Sede Regional XXXXXXXXX"
               onChange={handleChange}
             />
             <label htmlFor="email">ICBF Sede Regional XXXXXXXXX</label>
