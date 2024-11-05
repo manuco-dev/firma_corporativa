@@ -18,6 +18,7 @@ const FirmaInput = () => {
   });
 
   const direcciones = [
+    'Otra', // Opción para dirección manual
     'Barrio la Matuna, Edificio Concasa Piso 16',
     'Barrio Torices Bogotá Cra. 43 #14a-34',
     'Barrio Santa Lucia, Calle 31 Mz G Lote 15',
@@ -28,7 +29,6 @@ const FirmaInput = () => {
     'Calle 11 Libertador # 8 - 35 Barrio La Sabana, Simití - Bolívar',
     'Turbaco- Urb La Granja Cra 15 #28-284',
     'Carrera 17 # 5 - 191 Barrio Torices Sector San Pedro, Cartagena - Bolívar',
-    'Otra' // Opción para dirección manual
   ];
 
   const handleChange = (e) => {
