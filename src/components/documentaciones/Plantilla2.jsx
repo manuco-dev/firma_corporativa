@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import { Button } from 'primereact/button';
+import  { useRef, useState } from 'react';
 
 const Plantilla2 = () => {
     const contentRef = useRef(null);
@@ -21,7 +22,7 @@ const Plantilla2 = () => {
 
     return ( 
         <>
-            <h1 className='container'>Configuración de Perfil</h1>
+            <h1 className='container'>Configuración de Perfil Windows 10</h1>
             <div className="container" ref={contentRef}>
                 <span>Se ha validado su solicitud para Configuración de Perfil Windows 10, se informa
                     que se ha realizado
@@ -49,7 +50,7 @@ const Plantilla2 = () => {
                 <hr />
             </div>
             <div className="button-container">
-                <button className='btn btn-primary' onClick={handleCopy}>Copiar Solución</button>
+                <Button className='btn btn-primary' onClick={handleCopy}>Copiar Solución</Button>
                 {copySuccess && <div className="container-copy">Contenido copiado al portapapeles</div>}
             </div>
         </>

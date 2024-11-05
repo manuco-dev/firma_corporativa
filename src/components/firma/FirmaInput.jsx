@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { FloatLabel } from 'primereact/floatlabel';
@@ -13,6 +13,7 @@ const FirmaInput = () => {
     grupo: '',
     email: '',
     direccion: '',
+    direccionManual: '', // Campo adicional para dirección personalizada
     telefono: ''
   });
 
@@ -26,7 +27,8 @@ const FirmaInput = () => {
     'Calle 19 # 1 A - 15 Barrio Centro Mompós - Bolívar',
     'Calle 11 Libertador # 8 - 35 Barrio La Sabana, Simití - Bolívar',
     'Turbaco- Urb La Granja Cra 15 #28-284',
-    'Carrera 17 # 5 - 191 Barrio Torices Sector San Pedro, Cartagena - Bolívar'
+    'Carrera 17 # 5 - 191 Barrio Torices Sector San Pedro, Cartagena - Bolívar',
+    'Otra' // Opción para dirección manual
   ];
 
   const handleChange = (e) => {
@@ -39,7 +41,15 @@ const FirmaInput = () => {
   const handleSelectChange = (e) => {
     setFormData({
       ...formData,
-      direccion: e.value
+      direccion: e.value,
+      direccionManual: e.value === 'Otra' ? '' : '' // Limpia el campo si se selecciona otra opción
+    });
+  };
+
+  const handleDireccionManualChange = (e) => {
+    setFormData({
+      ...formData,
+      direccionManual: e.target.value, // Cambia el valor de direccionManual y no afecta direccion
     });
   };
 
@@ -49,53 +59,50 @@ const FirmaInput = () => {
         <form>
           <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
-            <InputText
-              type="text"
-              className="input-field"
-              name="nombre"
-              
-              onChange={handleChange}
-            />
-            <label htmlFor="nombre">Nombres y Apellidos</label>
+              <InputText
+                type="text"
+                className="input-field"
+                name="nombre"
+                onChange={handleChange}
+              />
+              <label htmlFor="nombre">Nombres y Apellidos</label>
             </FloatLabel>
           </div>
           <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
-            <InputText
-              type="text"
-              className="input-field"
-              name="puesto"
-              
-              onChange={handleChange}
-            />
-            <label htmlFor="puesto">Cargo planta o Contratista</label>
-            </FloatLabel>
-          </div>
-          <div className="form-group " style={{ marginBottom: '30px' }}>
-            <FloatLabel>
-            <InputText
-              type="text"
-              className="input-field"
-              name="grupo"
-              
-              onChange={handleChange}
-            />
-            <label htmlFor="grupo">Grupo al que pertenece</label>
+              <InputText
+                type="text"
+                className="input-field"
+                name="puesto"
+                onChange={handleChange}
+              />
+              <label htmlFor="puesto">Cargo planta o Contratista</label>
             </FloatLabel>
           </div>
           <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
-            <InputText
-              type="email"
-              className="input-field"
-              name="email"
-              onChange={handleChange}
-            />
-            <label htmlFor="email">ICBF Sede Regional XXXXXXXXX</label>
+              <InputText
+                type="text"
+                className="input-field"
+                name="grupo"
+                onChange={handleChange}
+              />
+              <label htmlFor="grupo">Grupo al que pertenece</label>
+            </FloatLabel>
+          </div>
+          <div className="form-group" style={{ marginBottom: '30px' }}>
+            <FloatLabel>
+              <InputText
+                type="email"
+                className="input-field"
+                name="email"
+                onChange={handleChange}
+              />
+              <label htmlFor="email">ICBF Sede Regional XXXXXXXXX</label>
             </FloatLabel>
           </div>
 
-          <div className="form-group" style={{ marginBottom: '30px' }} >
+          <div className="form-group" style={{ marginBottom: '30px' }}>
             <Dropdown
               name="direccion"
               className="input-field"
@@ -107,22 +114,39 @@ const FirmaInput = () => {
             />
           </div>
 
+          {/* Campo de dirección manual que aparece si se selecciona "Otra" */}
+          {formData.direccion === 'Otra' && (
+            <div className="form-group" style={{ marginBottom: '30px' }}>
+              <FloatLabel>
+                <InputText
+                  type="text"
+                  className="input-field"
+                  name="direccionManual"
+                  value={formData.direccionManual}
+                  onChange={handleDireccionManualChange} // Cambia el valor de direccionManual y sincroniza con direccion
+                  placeholder="Escriba la dirección"
+                />
+                <label htmlFor="direccionManual">Escriba la dirección</label>
+              </FloatLabel>
+            </div>
+          )}
+
           <div className="form-group" style={{ marginBottom: '30px' }}>
             <FloatLabel>
-            <InputText
-              type="text"
-              className="input-field"
-              name="telefono"
-              placeholder="Teléfono si tiene"
-              onChange={handleChange}
-            />
-            <label htmlFor="telefono">Teléfono si tiene</label>
+              <InputText
+                type="text"
+                className="input-field"
+                name="telefono"
+                placeholder="Teléfono si tiene"
+                onChange={handleChange}
+              />
+              <label htmlFor="telefono">Teléfono si tiene</label>
             </FloatLabel>
           </div>
         </form>
 
         {/* Componente Firma con los datos del formulario */}
-        <Firma data={formData} />
+        <Firma data={{ ...formData, direccion: formData.direccionManual || formData.direccion }} />
 
         {/* Pie de página */}
         <PiePag />

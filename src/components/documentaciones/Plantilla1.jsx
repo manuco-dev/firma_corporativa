@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import { Button } from 'primereact/button';
+import  { useRef, useState } from 'react';
 
 const Plantilla1 = () => {
     const contentRef = useRef(null);
@@ -43,7 +44,7 @@ const Plantilla1 = () => {
                 <br />
             </div>
             <div className="button-container">
-                <button className='btn btn-primary' onClick={handleCopy}>Copiar contenido</button>
+                <button className='btn btn-primary'  onClick={handleCopy}>Copiar contenido</button>
                 {copySuccess && <div className="container-copy">Contenido copiado al portapapeles</div>}
             </div>
         </>
