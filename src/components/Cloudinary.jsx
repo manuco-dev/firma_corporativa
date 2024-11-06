@@ -49,14 +49,6 @@ const UploadAndCompressPDF = () => {
         },
         body: JSON.stringify({
           url: fileUrl,
-          options: {
-            compress: true, // Habilita la compresión
-            // Ajustes adicionales pueden ir aquí
-            removeEmptyPages: true // Indica que se deben eliminar las páginas en blanco
-          }
-          
-          
-          
         })
       });
       const pdfData = await pdfCoResponse.json();
